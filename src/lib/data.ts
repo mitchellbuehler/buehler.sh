@@ -103,8 +103,8 @@ export const projects: ProjectItem[] = [
 // SOCIAL LINKS
 // -----------------------------------------------------------
 export const socialLinks = {
-  linkedin: "https://linkedin.com/in/YOUR_LINKEDIN", // Replace
-  github: "https://github.com/YOUR_GITHUB",           // Replace or remove
+  linkedin: "https://www.linkedin.com/in/mbuehler1/",
+  github: "https://github.com/mitchellbuehler",
   // twitter: "https://twitter.com/YOUR_HANDLE",
 };
 
@@ -112,7 +112,7 @@ export const socialLinks = {
 // CONTACT FORM CONFIG
 // -----------------------------------------------------------
 export const contactConfig = {
-  formspreeId: "FORMSPREE_FORM_ID", // Replace with your Formspree form ID
+  formspreeId: "maqlkzvb",
   heading: "Get in Touch",
   subheading:
     "Have a question, want to collaborate, or just want to connect? Drop me a note.",
