@@ -39,14 +39,19 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="section-container border-t border-base-border/50"
+      className="section-container border-t border-base-border/60"
     >
       <div className="grid lg:grid-cols-5 gap-12 lg:gap-16">
         <div className="lg:col-span-2">
           <p className="eyebrow">Contact</p>
-          <h2 className="section-heading mt-4">{contactConfig.heading}</h2>
+          <h2 className="section-heading mt-3">
+            {contactConfig.heading.split(" ").slice(0, -1).join(" ")}{" "}
+            <em className="text-clay not-italic font-display">
+              {contactConfig.heading.split(" ").slice(-1)}
+            </em>
+          </h2>
           <span className="accent-line" />
-          <p className="text-text-body text-lg leading-relaxed">
+          <p className="text-text-body text-[17px] leading-[1.7]">
             {contactConfig.subheading}
           </p>
         </div>
@@ -75,7 +80,7 @@ export default function Contact() {
                 name="name"
                 type="text"
                 required
-                className="w-full bg-base-raised border border-base-border rounded-md px-4 py-3 text-text-body focus:border-accent/60 focus:outline-none transition-colors"
+                className="w-full bg-base-raised border border-base-border rounded-lg px-4 py-3 text-text-primary placeholder-text-muted focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20 transition-all"
               />
             </div>
 
@@ -91,7 +96,7 @@ export default function Contact() {
                 name="email"
                 type="email"
                 required
-                className="w-full bg-base-raised border border-base-border rounded-md px-4 py-3 text-text-body focus:border-accent/60 focus:outline-none transition-colors"
+                className="w-full bg-base-raised border border-base-border rounded-lg px-4 py-3 text-text-primary placeholder-text-muted focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20 transition-all"
               />
             </div>
 
@@ -107,7 +112,7 @@ export default function Contact() {
                 name="message"
                 required
                 rows={5}
-                className="w-full bg-base-raised border border-base-border rounded-md px-4 py-3 text-text-body focus:border-accent/60 focus:outline-none transition-colors resize-none"
+                className="w-full bg-base-raised border border-base-border rounded-lg px-4 py-3 text-text-primary placeholder-text-muted focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20 transition-all resize-none font-body"
               />
             </div>
 
@@ -149,12 +154,12 @@ export default function Contact() {
               </button>
 
               {status === "sent" && (
-                <span className="text-emerald-300 text-sm">
-                  Thanks! I'll be in touch soon.
+                <span className="text-emerald-800 text-sm font-medium">
+                  Thanks! I&apos;ll be in touch soon.
                 </span>
               )}
               {status === "error" && (
-                <span className="text-red-400 text-sm">
+                <span className="text-clay text-sm font-medium">
                   Something went wrong. Please try again.
                 </span>
               )}

@@ -25,7 +25,7 @@ export default function Header() {
     <header
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-base/80 backdrop-blur-xl border-b border-base-border"
+          ? "bg-base/85 backdrop-blur-xl border-b border-base-border shadow-card"
           : "bg-transparent"
       }`}
     >
@@ -35,7 +35,7 @@ export default function Header() {
           className="font-display text-2xl text-text-primary tracking-tight"
         >
           {siteConfig.name}
-          <span className="text-accent">.</span>
+          <span className="text-clay">.</span>
         </a>
 
         <ul className="hidden md:flex items-center gap-10">

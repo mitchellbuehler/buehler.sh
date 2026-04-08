@@ -4,7 +4,7 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-base-border/50 relative z-10">
+    <footer className="border-t border-base-border/60 bg-base-raised/40 relative z-10">
       <div className="mx-auto max-w-6xl px-6 md:px-10 py-10 flex flex-col sm:flex-row items-center justify-between gap-6">
         <p className="text-sm text-text-muted">
           © {year} {siteConfig.name}. Built with care.

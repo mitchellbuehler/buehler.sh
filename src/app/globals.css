@@ -3,16 +3,17 @@
 @tailwind utilities;
 
 :root {
-  --base: #0a0a0f;
-  --base-raised: #12121a;
-  --base-subtle: #1a1a25;
-  --base-border: #2a2a38;
-  --accent: #d4a853;
-  --accent-dim: #b8923f;
-  --accent-glow: rgba(212, 168, 83, 0.12);
-  --text-primary: #ffffff;
-  --text-body: #e8e4dd;
-  --text-muted: #8a8690;
+  --base: #f2efe8;
+  --base-raised: #fbf7ee;
+  --base-subtle: #e8e2d2;
+  --base-border: #d4cfbe;
+  --accent: #6b7f5c;
+  --accent-dim: #556548;
+  --accent-glow: rgba(107, 127, 92, 0.18);
+  --clay: #c9622c;
+  --text-primary: #1f1d17;
+  --text-body: #3d3a30;
+  --text-muted: #6b6859;
 }
 
 @layer base {
@@ -30,14 +31,16 @@
     min-height: 100vh;
   }
 
+  /* Subtle paper texture across the whole page */
   body::before {
     content: "";
     position: fixed;
     inset: 0;
     pointer-events: none;
     z-index: 1;
-    opacity: 0.025;
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+    opacity: 0.4;
+    mix-blend-mode: multiply;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix type='matrix' values='0 0 0 0 0.18  0 0 0 0 0.15  0 0 0 0 0.12  0 0 0 0.08 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
   }
 
   ::selection {
@@ -46,8 +49,8 @@
   }
 
   ::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
+    width: 12px;
+    height: 12px;
   }
 
   ::-webkit-scrollbar-track {
@@ -56,12 +59,12 @@
 
   ::-webkit-scrollbar-thumb {
     background: var(--base-border);
-    border-radius: 6px;
-    border: 2px solid var(--base);
+    border-radius: 8px;
+    border: 3px solid var(--base);
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: var(--accent-dim);
+    background: var(--accent);
   }
 
   *:focus-visible {
@@ -73,41 +76,44 @@
 
 @layer components {
   .section-container {
-    @apply mx-auto w-full max-w-6xl px-6 md:px-10 py-24 md:py-32 relative z-10;
-  }
-
-  .section-heading {
-    @apply font-display text-4xl md:text-5xl text-text-primary leading-tight;
-  }
-
-  .accent-line {
-    @apply block h-[2px] w-12 bg-accent mt-4 mb-8;
+    @apply mx-auto w-full max-w-6xl px-6 md:px-10 py-20 md:py-24 relative z-10;
   }
 
   .eyebrow {
-    @apply text-xs uppercase tracking-[0.2em] text-accent font-body font-medium;
+    @apply text-[11px] uppercase tracking-[0.22em] text-clay font-body font-semibold;
+  }
+
+  .section-heading {
+    @apply font-display text-4xl md:text-5xl text-text-primary leading-[1.05] tracking-tight;
+    font-optical-sizing: auto;
+    font-variation-settings: "SOFT" 50, "WONK" 0;
+  }
+
+  .accent-line {
+    @apply block h-[2px] w-12 bg-accent mt-5 mb-8;
   }
 
   .card {
-    @apply bg-base-raised border border-base-border rounded-lg p-6 transition-all duration-300;
+    @apply bg-base-raised border border-base-border rounded-2xl p-6 transition-all duration-300 shadow-card;
   }
 
   .card:hover {
-    @apply border-accent/30;
-    box-shadow: 0 0 40px var(--accent-glow);
-    transform: translateY(-2px);
+    @apply border-accent/40;
+    box-shadow: 0 1px 2px rgba(31, 29, 23, 0.06),
+      0 16px 40px rgba(107, 127, 92, 0.18);
+    transform: translateY(-3px);
   }
 
   .badge {
-    @apply inline-flex items-center gap-1.5 text-[11px] uppercase tracking-wider font-medium px-2.5 py-1 rounded-full border;
+    @apply inline-flex items-center gap-1.5 text-[10px] uppercase tracking-[0.14em] font-semibold px-2.5 py-1 rounded-full border;
   }
 
   .badge-active {
-    @apply text-emerald-300 border-emerald-500/30 bg-emerald-500/10;
+    @apply text-emerald-800 border-emerald-700/30 bg-emerald-700/10;
   }
 
   .badge-completed {
-    @apply text-accent border-accent/30 bg-accent/10;
+    @apply text-clay border-clay/30 bg-clay/10;
   }
 
   .badge-paused {
@@ -115,18 +121,23 @@
   }
 
   .tech-tag {
-    @apply text-[11px] font-body text-text-muted bg-base-subtle border border-base-border px-2 py-1 rounded;
+    @apply text-[11px] font-body text-text-body bg-base-subtle border border-base-border px-2 py-1 rounded-md;
   }
 
   .btn-primary {
-    @apply inline-flex items-center gap-2 bg-accent text-base font-medium px-6 py-3 rounded-md transition-all duration-200 hover:bg-accent-dim;
+    @apply inline-flex items-center justify-center gap-2 bg-accent text-base-raised font-medium px-5 py-2.5 rounded-full transition-all duration-200 hover:bg-accent-dim text-sm;
   }
 
   .btn-primary:hover {
-    box-shadow: 0 0 30px var(--accent-glow);
+    box-shadow: 0 8px 24px rgba(107, 127, 92, 0.3);
   }
 
   .btn-ghost {
-    @apply inline-flex items-center gap-2 border border-base-border text-text-body font-medium px-6 py-3 rounded-md transition-all duration-200 hover:border-accent/50 hover:text-accent;
+    @apply inline-flex items-center justify-center gap-2 border border-base-border bg-base/50 text-text-primary font-medium px-5 py-2.5 rounded-full transition-all duration-200 hover:border-accent hover:text-accent text-sm;
+  }
+
+  /* Polaroid frame: white card with photo and caption */
+  .polaroid {
+    @apply bg-white p-3 pb-5 shadow-polaroid rounded-sm;
   }
 }

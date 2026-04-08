@@ -94,6 +94,7 @@ export interface ProjectItem {
   status: ProjectStatus;
   tags: string[];
   link?: string; // Optional external URL (GitHub, App Store, etc.)
+  image?: string; // Optional image path under /public
 }
 
 export const projects: ProjectItem[] = [
@@ -103,6 +104,7 @@ export const projects: ProjectItem[] = [
       "An iOS app that identifies which Chicago neighborhood you're currently in using GPS and GeoJSON boundary data. Built with Swift, integrating AdMob for monetization.",
     status: "active",
     tags: ["Swift", "iOS", "GeoJSON", "MapKit"],
+    image: "/projects/whichhood.png",
   },
   {
     title: "Hackintosh Build",
@@ -111,6 +113,7 @@ export const projects: ProjectItem[] = [
     status: "completed",
     tags: ["OpenCore", "macOS", "Hardware", "Networking"],
     link: "https://github.com/mitchellbuehler/optiplex-5080-hackintosh",
+    image: "/projects/hackintosh.jpg",
   },
   // ADD MORE PROJECTS — copy the structure above.
 ];
