@@ -6,13 +6,13 @@
 
 export const siteConfig = {
   name: "Mitchell",
-  title: "Sales Engineer",
+  title: "Director, Solution Engineering",
   company: "Tanium",
   domain: "Autonomous IT & Cybersecurity",
-  location: "Chicago, IL",
+  location: "Oak Park, IL",
   tagline: "Bridging the gap between complex technology and business outcomes.",
   description:
-    "Sales Engineer specializing in Autonomous IT and endpoint management. I help enterprise organizations understand, evaluate, and realize value from security and operations platforms — translating deep technical capabilities into measurable business impact.",
+    "Director of Solution Engineering at Tanium with 10+ years across cybersecurity, endpoint operations, and enterprise IT. I help enterprise organizations understand, evaluate, and realize value from security and operations platforms, translating C-level business challenges into scalable technical architectures.",
 };
 
 // -----------------------------------------------------------
@@ -20,16 +20,20 @@ export const siteConfig = {
 // -----------------------------------------------------------
 export const about = {
   summary: [
-    "I'm a Sales Engineer working at the intersection of cybersecurity, IT operations, and enterprise transformation. My role sits between the deeply technical and the strategically commercial — running proof-of-value engagements, building executive business cases, and delivering demos that turn complexity into clarity.",
-    "Beyond the day job, I'm a builder. I develop apps, tinker with hardware projects, and renovate a 1920s home in one of Chicago's most architecturally significant neighborhoods. I believe the best technical minds are the ones who never stop being curious.",
+    "I'm a technical leader with 10+ years across cybersecurity, endpoint operations, and enterprise IT, currently leading Solution Engineering at Tanium. My role sits between the deeply technical and the strategically commercial: running proof-of-value engagements, building executive business cases, and translating C-level conversations into scalable technical architectures.",
+    "I started in hands-on IT and support engineering, moved into post-sales as a Technical Account Manager for Fortune 500 customers, and now lead pre-sales for enterprise deals across the Americas. I care about solving hard problems through technology and mentoring engineers along the way.",
+    "Outside of work, I'm a builder. I develop apps, tinker with hardware projects, explore how AI is reshaping the way we build and work, and renovate a 1920s home in the Chicago area. I believe the best technical minds are the ones who never stop being curious.",
   ],
   expertise: [
     "Endpoint Security & Management",
     "Proof-of-Value Engagements",
-    "Technical Sales & Demo Delivery",
-    "Competitive Positioning",
-    "Executive Business Case Development",
+    "Technical Sales & Solution Architecture",
+    "Executive Business Reviews",
     "Enterprise IT Operations",
+    "Vulnerability & Risk Management",
+    "Automation & Integration (Python, PowerShell, Bash)",
+    "AI & LLM-Powered Workflows",
+    "Mentoring & Enablement",
   ],
 };
 
@@ -46,26 +50,37 @@ export interface ExperienceItem {
 
 export const experience: ExperienceItem[] = [
   {
-    role: "Sales Engineer",
+    role: "Director, Solution Engineering",
     company: "Tanium",
-    period: "Present",
+    period: "2025 – Present",
     description:
-      "Leading technical sales motions for enterprise accounts in the Autonomous IT and cybersecurity space.",
-    highlights: [
-      "Run end-to-end proof-of-value engagements for Fortune 500 prospects",
-      "Built and delivered executive business case materials driving multi-million dollar ELA approvals",
-      "Developed 'Demo the Demo' enablement program for the SE team",
-      "Competitive positioning and technical differentiation across endpoint management landscape",
-    ],
+      "Leading pre-sales technical strategy for enterprise accounts across the Americas, turning C-level business problems into technical solutions that close.",
+    highlights: [],
   },
-  // ADD MORE ROLES — copy the structure above:
-  // {
-  //   role: "Previous Title",
-  //   company: "Previous Company",
-  //   period: "2020 – 2023",
-  //   description: "One-sentence summary.",
-  //   highlights: ["Achievement 1", "Achievement 2"],
-  // },
+  {
+    role: "Director, Technical Account Management",
+    company: "Tanium",
+    period: "2021 – 2025",
+    description:
+      "Owned the technical relationship for a portfolio of Fortune 500 customers, from onboarding through expansion and ongoing platform strategy.",
+    highlights: [],
+  },
+  {
+    role: "Senior Technical Support Engineer",
+    company: "McAfee",
+    period: "2018 – 2021",
+    description:
+      "Worked with enterprise customers on the McAfee endpoint security suite, handling escalations, live webinars, and internal enablement.",
+    highlights: [],
+  },
+  {
+    role: "Earlier Career",
+    company: "IT, Systems Admin & Entrepreneurship",
+    period: "2012 – 2018",
+    description:
+      "Hands-on IT support, systems administration, and a co-founded server hosting company. The foundation everything else is built on.",
+    highlights: [],
+  },
 ];
 
 // -----------------------------------------------------------

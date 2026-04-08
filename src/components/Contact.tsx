@@ -150,7 +150,7 @@ export default function Contact() {
 
               {status === "sent" && (
                 <span className="text-emerald-300 text-sm">
-                  Thanks — I'll be in touch soon.
+                  Thanks! I'll be in touch soon.
                 </span>
               )}
               {status === "error" && (

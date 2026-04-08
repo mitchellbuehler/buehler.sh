@@ -17,17 +17,17 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: `${siteConfig.name} — ${siteConfig.title} at ${siteConfig.company}`,
+  title: `${siteConfig.name} | ${siteConfig.title} at ${siteConfig.company}`,
   description: siteConfig.description,
   openGraph: {
-    title: `${siteConfig.name} — ${siteConfig.title} at ${siteConfig.company}`,
+    title: `${siteConfig.name} | ${siteConfig.title} at ${siteConfig.company}`,
     description: siteConfig.description,
     type: "website",
     // images: ["/og-image.png"], // TODO: add OG image to /public
   },
   twitter: {
     card: "summary_large_image",
-    title: `${siteConfig.name} — ${siteConfig.title}`,
+    title: `${siteConfig.name} | ${siteConfig.title}`,
     description: siteConfig.description,
   },
 };
