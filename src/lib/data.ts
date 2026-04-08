@@ -92,9 +92,10 @@ export const projects: ProjectItem[] = [
   {
     title: "Hackintosh Build",
     description:
-      "Converted a Dell Optiplex 5080 Micro (Comet Lake) into a fully functional macOS workstation using OpenCore. Custom USB mapping, kext configuration, and iterative boot debugging.",
+      "Converted a Dell Optiplex 5080 Micro (Comet Lake) into a fully functional macOS workstation using OpenCore. Custom USB mapping, kext configuration, and iterative boot debugging. EFI published for other 5080 Micro owners.",
     status: "completed",
     tags: ["OpenCore", "macOS", "Hardware", "Networking"],
+    link: "https://github.com/mitchellbuehler/optiplex-5080-hackintosh",
   },
   // ADD MORE PROJECTS — copy the structure above.
 ];
