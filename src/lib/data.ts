@@ -104,6 +104,7 @@ export const projects: ProjectItem[] = [
       "An iOS app that identifies which Chicago neighborhood you're currently in using GPS and GeoJSON boundary data. Built with Swift, integrating AdMob for monetization.",
     status: "active",
     tags: ["Swift", "iOS", "GeoJSON", "MapKit"],
+    link: "/whichhood",
     image: "/projects/whichhood.png",
   },
   {

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { projects, type ProjectStatus } from "@/lib/data";
 
 const statusClass: Record<ProjectStatus, string> = {
@@ -34,19 +35,26 @@ export default function Projects() {
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {projects.map((project) => {
-          const CardTag = project.link ? "a" : "div";
+          const isInternal = project.link?.startsWith("/");
+          const CardTag: "a" | "div" | typeof Link = project.link
+            ? isInternal
+              ? Link
+              : "a"
+            : "div";
           const cardProps = project.link
-            ? {
-                href: project.link,
-                target: "_blank",
-                rel: "noopener noreferrer",
-              }
+            ? isInternal
+              ? { href: project.link }
+              : {
+                  href: project.link,
+                  target: "_blank",
+                  rel: "noopener noreferrer",
+                }
             : {};
 
           return (
             <CardTag
               key={project.title}
-              {...cardProps}
+              {...(cardProps as { href: string })}
               className="card group flex flex-col !p-0 overflow-hidden"
             >
               {/* Image area */}
