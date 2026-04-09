@@ -140,4 +140,30 @@
   .polaroid {
     @apply bg-white p-3 pb-5 shadow-polaroid rounded-sm;
   }
+
+  /* Long-form legal/support copy (privacy policy, support page, etc.) */
+  .prose-legal {
+    @apply text-text-body text-[16px] leading-[1.75] mt-10;
+  }
+  .prose-legal p {
+    @apply mb-5;
+  }
+  .prose-legal h2 {
+    @apply font-display text-2xl md:text-3xl text-text-primary mt-12 mb-4 leading-snug;
+  }
+  .prose-legal h3 {
+    @apply font-display text-xl text-text-primary mt-8 mb-3 leading-snug;
+  }
+  .prose-legal ul {
+    @apply list-disc pl-6 mb-5 space-y-2;
+  }
+  .prose-legal ul li {
+    @apply leading-[1.65];
+  }
+  .prose-legal a {
+    @apply text-accent hover:text-accent-dim underline underline-offset-4;
+  }
+  .prose-legal code {
+    @apply bg-base-subtle border border-base-border rounded px-1.5 py-0.5 text-[13px] font-mono text-text-primary;
+  }
 }
