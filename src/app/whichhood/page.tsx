@@ -3,9 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Footer from "@/components/Footer";
 
-// NOTE: Replace APP_STORE_URL with the real apps.apple.com link once the
-// listing is indexed (usually within 24–48h of going live).
-const APP_STORE_URL = "https://apps.apple.com/us/app/which-hood/id0000000000";
+const APP_STORE_URL = "https://apps.apple.com/app/id6761684567";
 const PRIVACY_URL = "https://mitchellbuehler.github.io/whichhood-privacy/";
 const SUPPORT_URL =
   "https://mitchellbuehler.github.io/whichhood-privacy/support.html";
